@@ -35,16 +35,20 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        viewPager.setCurrentItem(0);
-        //startActivity(new Intent(MainActivity.this, AdminLoginActivity.class));
+        viewPager.setCurrentItem(0);                    //Default page when app opens
+
     }
 
+
+    //Setting Up Toolbar Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_toolbar_menu, menu);
         return true;
     }
 
+
+    //Defining actions for the options in Toolbar Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
